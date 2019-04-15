@@ -18,9 +18,7 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
 })
-.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state, $firebaseAuth){
-  var auth = $firebaseAuth();
-
+.controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state){
   $scope.data = {};
   $scope.login = function() {
       LoginService.loginUser($scope.data).then(function(snapshot){
